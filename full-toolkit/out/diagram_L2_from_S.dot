@@ -1,0 +1,123 @@
+digraph hw {
+  rankdir=LR;
+  ranksep="0.8 equally";
+  nodesep="0.4";
+  label="gds/04_final.gds — from S, L=2"; labelloc=t; fontsize=16;
+  node [fontname="Helvetica"];
+  edge [fontname="Helvetica", arrowsize=0.7];
+  g659 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A_N">A_N</TD>
+<TD ROWSPAN="4"><B>AND4_2N</B><BR/><FONT POINT-SIZE="10">#659</FONT></TD>
+<TD PORT="X">X</TD>
+</TR>
+<TR>
+<TD PORT="B_N">B_N</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="C">C</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="D">D</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g1052 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="2"><B>XNOR2</B><BR/><FONT POINT-SIZE="10">#1052</FONT></TD>
+<TD PORT="Y">Y</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g629 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="2"><B>AND2</B><BR/><FONT POINT-SIZE="10">#629</FONT></TD>
+<TD PORT="X">X</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g108 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="3"><B>AND3</B><BR/><FONT POINT-SIZE="10">#108</FONT></TD>
+<TD PORT="X">X</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="C">C</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g6 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A_N">A_N</TD>
+<TD ROWSPAN="4"><B>AND4_2N</B><BR/><FONT POINT-SIZE="10">#6</FONT></TD>
+<TD PORT="X">X</TD>
+</TR>
+<TR>
+<TD PORT="B_N">B_N</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="C">C</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="D">D</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  n70_7 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>S</TD></TR></TABLE>>];
+  n69_134 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b134</TD></TR></TABLE>>];
+  n69_135 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b135</TD></TR></TABLE>>];
+  n69_1 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b1</TD></TR></TABLE>>];
+  n69_140 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b140</TD></TR></TABLE>>];
+  n69_2 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b2</TD></TR></TABLE>>];
+  n69_0 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b0</TD></TR></TABLE>>];
+  n69_3 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b3</TD></TR></TABLE>>];
+  n69_153 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b153</TD></TR></TABLE>>];
+  n69_125 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b125</TD></TR></TABLE>>];
+  n69_209 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b209</TD></TR></TABLE>>];
+  n69_144 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b144</TD></TR></TABLE>>];
+  n69_143 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b143</TD></TR></TABLE>>];
+  n69_141 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b141</TD></TR></TABLE>>];
+  n69_142 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b142</TD></TR></TABLE>>];
+  { rank=same; n70_7; }
+  { rank=same; g659; }
+  { rank=same; n69_134; n69_135; n69_1; n69_140; }
+  { rank=same; g1052; g629; g108; g6; }
+  { rank=same; n69_2; n69_0; n69_3; n69_153; n69_125; n69_209; n69_144; n69_143; n69_141; n69_142; }
+  n69_134 -> g659:"A_N";
+  n69_135 -> g659:"B_N";
+  n69_1 -> g659:"C";
+  n69_140 -> g659:"D";
+  g659:"X" -> n70_7;
+  n69_153 -> g1052:"A";
+  n69_125 -> g1052:"B";
+  g1052:"Y" -> n69_134;
+  n69_153 -> g629:"A";
+  n69_209 -> g629:"B";
+  g629:"X" -> n69_135;
+  n69_2 -> g108:"A";
+  n69_0 -> g108:"B";
+  n69_3 -> g108:"C";
+  g108:"X" -> n69_1;
+  n69_144 -> g6:"A_N";
+  n69_143 -> g6:"B_N";
+  n69_141 -> g6:"C";
+  n69_142 -> g6:"D";
+  g6:"X" -> n69_140;
+}

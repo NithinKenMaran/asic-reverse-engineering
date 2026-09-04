@@ -1,0 +1,158 @@
+digraph hw {
+  rankdir=LR;
+  ranksep="0.8 equally";
+  nodesep="0.4";
+  label="gds/puzzle.gds — from success, L=3"; labelloc=t; fontsize=16;
+  node [fontname="Helvetica"];
+  edge [fontname="Helvetica", arrowsize=0.7];
+  g228 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="D">D</TD>
+<TD ROWSPAN="3"><B>DFF_RSTB</B><BR/><FONT POINT-SIZE="10">#228</FONT></TD>
+<TD PORT="Q">Q</TD>
+</TR>
+<TR>
+<TD PORT="CLK">CLK</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="RESET_B">RESET_B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g233 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A1">A1</TD>
+<TD ROWSPAN="5"><B>AO32</B><BR/><FONT POINT-SIZE="10">#233</FONT></TD>
+<TD PORT="X">X</TD>
+</TR>
+<TR>
+<TD PORT="A2">A2</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="A3">A3</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="B1">B1</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="B2">B2</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g727 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="1"><B>CLKBUF</B><BR/><FONT POINT-SIZE="10">#727</FONT></TD>
+<TD PORT="X">X</TD>
+</TR>
+</TABLE>>];
+  g406 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A_N">A_N</TD>
+<TD ROWSPAN="2"><B>NAND2_1N</B><BR/><FONT POINT-SIZE="10">#406</FONT></TD>
+<TD PORT="Y">Y</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g2358 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="1"><B>CLKBUF</B><BR/><FONT POINT-SIZE="10">#2358</FONT></TD>
+<TD PORT="X">X</TD>
+</TR>
+</TABLE>>];
+  g5532 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="1"><B>INV</B><BR/><FONT POINT-SIZE="10">#5532</FONT></TD>
+<TD PORT="Y">Y</TD>
+</TR>
+</TABLE>>];
+  g460 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="2"><B>AND2</B><BR/><FONT POINT-SIZE="10">#460</FONT></TD>
+<TD PORT="X">X</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g450 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A_N">A_N</TD>
+<TD ROWSPAN="4"><B>AND4_1N</B><BR/><FONT POINT-SIZE="10">#450</FONT></TD>
+<TD PORT="X">X</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="C">C</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="D">D</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  n69_164 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>success</TD></TR></TABLE>>];
+  n69_183 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b183</TD></TR></TABLE>>];
+  n69_205 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b205</TD></TR></TABLE>>];
+  n69_1651 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>rst_n</TD></TR></TABLE>>];
+  n71_32 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met4.b32</TD></TR></TABLE>>];
+  n69_190 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b190</TD></TR></TABLE>>];
+  n69_179 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b179</TD></TR></TABLE>>];
+  n69_181 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b181</TD></TR></TABLE>>];
+  n70_630 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met3.b630</TD></TR></TABLE>>];
+  n69_253 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b253</TD></TR></TABLE>>];
+  n69_801 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b801</TD></TR></TABLE>>];
+  n69_1014 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b1014</TD></TR></TABLE>>];
+  n69_90 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b90</TD></TR></TABLE>>];
+  n71_13 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met4.b13</TD></TR></TABLE>>];
+  n70_239 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>clk</TD></TR></TABLE>>];
+  n69_1023 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b1023</TD></TR></TABLE>>];
+  { rank=same; n69_164; }
+  { rank=same; g228; }
+  { rank=same; n69_183; n69_205; n69_1651; }
+  { rank=same; g233; g727; }
+  { rank=same; n71_32; n69_190; n69_179; n69_181; n70_630; }
+  { rank=same; g406; g2358; g5532; g460; g450; }
+  { rank=same; n69_253; n69_801; n69_1014; n69_90; n71_13; n70_239; n69_1023; }
+  n69_183 -> g228:"D";
+  n69_205 -> g228:"CLK";
+  n69_1651 -> g228:"RESET_B";
+  g228:"Q" -> n69_164;
+  n71_32 -> g233:"A1";
+  n69_190 -> g233:"A2";
+  n69_179 -> g233:"A3";
+  n69_164 -> g233:"B1";
+  n69_181 -> g233:"B2";
+  g233:"X" -> n69_183;
+  n70_630 -> g727:"A";
+  g727:"X" -> n69_205;
+  n69_253 -> g406:"A_N";
+  n69_801 -> g406:"B";
+  g406:"Y" -> n69_181;
+  n70_239 -> g2358:"A";
+  g2358:"X" -> n70_630;
+  n69_1023 -> g5532:"A";
+  g5532:"Y" -> n71_32;
+  n69_90 -> g460:"A";
+  n71_13 -> g460:"B";
+  g460:"X" -> n69_190;
+  n69_253 -> g450:"A_N";
+  n69_801 -> g450:"B";
+  n69_1014 -> g450:"C";
+  n69_1014 -> g450:"D";
+  g450:"X" -> n69_179;
+}

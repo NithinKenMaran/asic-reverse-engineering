@@ -1,0 +1,532 @@
+digraph hw {
+  rankdir=LR;
+  ranksep="0.8 equally";
+  nodesep="0.4";
+  label="gds/04_final.gds — from S, L=4"; labelloc=t; fontsize=16;
+  node [fontname="Helvetica"];
+  edge [fontname="Helvetica", arrowsize=0.7];
+  g659 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A_N">A_N</TD>
+<TD ROWSPAN="4"><B>AND4_2N</B><BR/><FONT POINT-SIZE="10">#659</FONT></TD>
+<TD PORT="X">X</TD>
+</TR>
+<TR>
+<TD PORT="B_N">B_N</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="C">C</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="D">D</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g1052 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="2"><B>XNOR2</B><BR/><FONT POINT-SIZE="10">#1052</FONT></TD>
+<TD PORT="Y">Y</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g629 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="2"><B>AND2</B><BR/><FONT POINT-SIZE="10">#629</FONT></TD>
+<TD PORT="X">X</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g108 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="3"><B>AND3</B><BR/><FONT POINT-SIZE="10">#108</FONT></TD>
+<TD PORT="X">X</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="C">C</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g6 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A_N">A_N</TD>
+<TD ROWSPAN="4"><B>AND4_2N</B><BR/><FONT POINT-SIZE="10">#6</FONT></TD>
+<TD PORT="X">X</TD>
+</TR>
+<TR>
+<TD PORT="B_N">B_N</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="C">C</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="D">D</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g632 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="2"><B>XOR2</B><BR/><FONT POINT-SIZE="10">#632</FONT></TD>
+<TD PORT="X">X</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g975 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="2"><B>XNOR2</B><BR/><FONT POINT-SIZE="10">#975</FONT></TD>
+<TD PORT="Y">Y</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g1069 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="2"><B>OR2</B><BR/><FONT POINT-SIZE="10">#1069</FONT></TD>
+<TD PORT="X">X</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g631 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="2"><B>XOR2</B><BR/><FONT POINT-SIZE="10">#631</FONT></TD>
+<TD PORT="X">X</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g633 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="2"><B>XOR2</B><BR/><FONT POINT-SIZE="10">#633</FONT></TD>
+<TD PORT="X">X</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g623 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A1">A1</TD>
+<TD ROWSPAN="3"><B>OAI21_NB</B><BR/><FONT POINT-SIZE="10">#623</FONT></TD>
+<TD PORT="Y">Y</TD>
+</TR>
+<TR>
+<TD PORT="A2">A2</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="B1_N">B1_N</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g972 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="2"><B>XOR2</B><BR/><FONT POINT-SIZE="10">#972</FONT></TD>
+<TD PORT="X">X</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g1002 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="2"><B>NAND2</B><BR/><FONT POINT-SIZE="10">#1002</FONT></TD>
+<TD PORT="Y">Y</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g900 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="2"><B>XNOR2</B><BR/><FONT POINT-SIZE="10">#900</FONT></TD>
+<TD PORT="Y">Y</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g634 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="2"><B>XOR2</B><BR/><FONT POINT-SIZE="10">#634</FONT></TD>
+<TD PORT="X">X</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g622 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A1">A1</TD>
+<TD ROWSPAN="3"><B>AOI21_NB</B><BR/><FONT POINT-SIZE="10">#622</FONT></TD>
+<TD PORT="Y">Y</TD>
+</TR>
+<TR>
+<TD PORT="A2">A2</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="B1_N">B1_N</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g761 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="2"><B>NOR2</B><BR/><FONT POINT-SIZE="10">#761</FONT></TD>
+<TD PORT="Y">Y</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g541 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="D">D</TD>
+<TD ROWSPAN="3"><B>DFF_RSTB</B><BR/><FONT POINT-SIZE="10">#541</FONT></TD>
+<TD PORT="Q">Q</TD>
+</TR>
+<TR>
+<TD PORT="CLK">CLK</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="RESET_B">RESET_B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g989 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="2"><B>NOR2</B><BR/><FONT POINT-SIZE="10">#989</FONT></TD>
+<TD PORT="Y">Y</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g765 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="2"><B>NOR2</B><BR/><FONT POINT-SIZE="10">#765</FONT></TD>
+<TD PORT="Y">Y</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g616 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="2"><B>NOR2</B><BR/><FONT POINT-SIZE="10">#616</FONT></TD>
+<TD PORT="Y">Y</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g852 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="2"><B>NAND2</B><BR/><FONT POINT-SIZE="10">#852</FONT></TD>
+<TD PORT="Y">Y</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g1048 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A1">A1</TD>
+<TD ROWSPAN="4"><B>AO31</B><BR/><FONT POINT-SIZE="10">#1048</FONT></TD>
+<TD PORT="X">X</TD>
+</TR>
+<TR>
+<TD PORT="A2">A2</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="A3">A3</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="B1">B1</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g630 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="2"><B>AND2</B><BR/><FONT POINT-SIZE="10">#630</FONT></TD>
+<TD PORT="X">X</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g635 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A1">A1</TD>
+<TD ROWSPAN="4"><B>AO31</B><BR/><FONT POINT-SIZE="10">#635</FONT></TD>
+<TD PORT="X">X</TD>
+</TR>
+<TR>
+<TD PORT="A2">A2</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="A3">A3</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="B1">B1</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g619 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="A">A</TD>
+<TD ROWSPAN="2"><B>NOR2</B><BR/><FONT POINT-SIZE="10">#619</FONT></TD>
+<TD PORT="Y">Y</TD>
+</TR>
+<TR>
+<TD PORT="B">B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g181 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="D">D</TD>
+<TD ROWSPAN="3"><B>DFF_RSTB</B><BR/><FONT POINT-SIZE="10">#181</FONT></TD>
+<TD PORT="Q">Q</TD>
+</TR>
+<TR>
+<TD PORT="CLK">CLK</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="RESET_B">RESET_B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  g433 [shape=plaintext label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<TR>
+<TD PORT="D">D</TD>
+<TD ROWSPAN="3"><B>DFF_RSTB</B><BR/><FONT POINT-SIZE="10">#433</FONT></TD>
+<TD PORT="Q">Q</TD>
+</TR>
+<TR>
+<TD PORT="CLK">CLK</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD PORT="RESET_B">RESET_B</TD>
+<TD></TD>
+</TR>
+</TABLE>>];
+  n70_7 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>S</TD></TR></TABLE>>];
+  n69_134 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b134</TD></TR></TABLE>>];
+  n69_135 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b135</TD></TR></TABLE>>];
+  n69_1 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b1</TD></TR></TABLE>>];
+  n69_140 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b140</TD></TR></TABLE>>];
+  n69_2 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b2</TD></TR></TABLE>>];
+  n69_0 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b0</TD></TR></TABLE>>];
+  n69_3 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b3</TD></TR></TABLE>>];
+  n69_153 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b153</TD></TR></TABLE>>];
+  n69_125 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b125</TD></TR></TABLE>>];
+  n69_209 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b209</TD></TR></TABLE>>];
+  n69_144 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b144</TD></TR></TABLE>>];
+  n69_143 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b143</TD></TR></TABLE>>];
+  n69_141 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b141</TD></TR></TABLE>>];
+  n69_142 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b142</TD></TR></TABLE>>];
+  n69_145 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b145</TD></TR></TABLE>>];
+  n69_154 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b154</TD></TR></TABLE>>];
+  n70_25 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met3.b25</TD></TR></TABLE>>];
+  n69_195 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b195</TD></TR></TABLE>>];
+  n69_126 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b126</TD></TR></TABLE>>];
+  n67_844 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>li1.b844</TD></TR></TABLE>>];
+  n69_219 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b219</TD></TR></TABLE>>];
+  n69_162 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b162</TD></TR></TABLE>>];
+  n69_161 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b161</TD></TR></TABLE>>];
+  n69_170 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b170</TD></TR></TABLE>>];
+  n69_112 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b112</TD></TR></TABLE>>];
+  n67_840 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>li1.b840</TD></TR></TABLE>>];
+  n69_204 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b204</TD></TR></TABLE>>];
+  n67_642 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>li1.b642</TD></TR></TABLE>>];
+  n69_176 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b176</TD></TR></TABLE>>];
+  n67_787 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>li1.b787</TD></TR></TABLE>>];
+  n69_206 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b206</TD></TR></TABLE>>];
+  n67_641 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>li1.b641</TD></TR></TABLE>>];
+  n68_187 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met1.b187</TD></TR></TABLE>>];
+  n69_102 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b102</TD></TR></TABLE>>];
+  n67_510 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>li1.b510</TD></TR></TABLE>>];
+  n70_33 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met3.b33</TD></TR></TABLE>>];
+  n70_31 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met3.b31</TD></TR></TABLE>>];
+  n69_185 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b185</TD></TR></TABLE>>];
+  n69_177 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b177</TD></TR></TABLE>>];
+  n69_152 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b152</TD></TR></TABLE>>];
+  n69_124 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b124</TD></TR></TABLE>>];
+  n69_187 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b187</TD></TR></TABLE>>];
+  n69_193 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b193</TD></TR></TABLE>>];
+  n68_146 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met1.b146</TD></TR></TABLE>>];
+  n67_441 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>li1.b441</TD></TR></TABLE>>];
+  n68_78 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met1.b78</TD></TR></TABLE>>];
+  n69_56 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b56</TD></TR></TABLE>>];
+  n67_141 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>li1.b141</TD></TR></TABLE>>];
+  n69_216 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b216</TD></TR></TABLE>>];
+  n69_217 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b217</TD></TR></TABLE>>];
+  n70_15 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met3.b15</TD></TR></TABLE>>];
+  n69_160 [shape=plaintext label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD><FONT POINT-SIZE="20">&#9679;</FONT></TD></TR><TR><TD>met2.b160</TD></TR></TABLE>>];
+  { rank=same; n70_7; }
+  { rank=same; g659; }
+  { rank=same; n69_134; n69_135; n69_1; n69_140; }
+  { rank=same; g1052; g629; g108; g6; }
+  { rank=same; n69_2; n69_0; n69_3; n69_153; n69_125; n69_209; n69_144; n69_143; n69_141; n69_142; }
+  { rank=same; g632; g975; g1069; g631; g633; g623; g972; g1002; g900; g634; }
+  { rank=same; n69_145; n69_154; n70_25; n69_195; n69_126; n67_844; n69_219; n69_162; n69_161; n69_170; n69_112; n67_840; n69_204; n67_642; n69_176; n67_787; n69_206; n67_641; }
+  { rank=same; g622; g761; g541; g989; g765; g616; g852; g1048; g630; g635; g619; g181; g433; }
+  { rank=same; n68_187; n69_102; n67_510; n70_33; n70_31; n69_185; n69_177; n69_152; n69_124; n69_187; n69_193; n68_146; n67_441; n68_78; n69_56; n67_141; n69_216; n69_217; n70_15; n69_160; }
+  n69_134 -> g659:"A_N";
+  n69_135 -> g659:"B_N";
+  n69_1 -> g659:"C";
+  n69_140 -> g659:"D";
+  g659:"X" -> n70_7;
+  n69_153 -> g1052:"A";
+  n69_125 -> g1052:"B";
+  g1052:"Y" -> n69_134;
+  n69_153 -> g629:"A";
+  n69_209 -> g629:"B";
+  g629:"X" -> n69_135;
+  n69_2 -> g108:"A";
+  n69_0 -> g108:"B";
+  n69_3 -> g108:"C";
+  g108:"X" -> n69_1;
+  n69_144 -> g6:"A_N";
+  n69_143 -> g6:"B_N";
+  n69_141 -> g6:"C";
+  n69_142 -> g6:"D";
+  g6:"X" -> n69_140;
+  n69_204 -> g632:"A";
+  n67_642 -> g632:"B";
+  g632:"X" -> n69_142;
+  n69_219 -> g975:"A";
+  n69_162 -> g975:"B";
+  g975:"Y" -> n69_0;
+  n70_25 -> g1069:"A";
+  n69_195 -> g1069:"B";
+  g1069:"X" -> n69_209;
+  n69_112 -> g631:"A";
+  n67_840 -> g631:"B";
+  g631:"X" -> n69_125;
+  n69_176 -> g633:"A";
+  n67_787 -> g633:"B";
+  g633:"X" -> n69_141;
+  n69_161 -> g623:"A1";
+  n69_162 -> g623:"A2";
+  n69_170 -> g623:"B1_N";
+  g623:"Y" -> n69_3;
+  n69_126 -> g972:"A";
+  n67_844 -> g972:"B";
+  g972:"X" -> n69_144;
+  n70_25 -> g1002:"A";
+  n69_195 -> g1002:"B";
+  g1002:"Y" -> n69_153;
+  n69_145 -> g900:"A";
+  n69_154 -> g900:"B";
+  g900:"Y" -> n69_2;
+  n69_206 -> g634:"A";
+  n67_641 -> g634:"B";
+  g634:"X" -> n69_143;
+  n69_187 -> g622:"A1";
+  n69_154 -> g622:"A2";
+  n69_193 -> g622:"B1_N";
+  g622:"Y" -> n69_162;
+  n69_217 -> g761:"A";
+  n69_217 -> g761:"B";
+  g761:"Y" -> n69_204;
+  n68_187 -> g541:"D";
+  n69_102 -> g541:"CLK";
+  n67_510 -> g541:"RESET_B";
+  g541:"Q" -> n70_25;
+  n69_170 -> g989:"A";
+  n69_161 -> g989:"B";
+  g989:"Y" -> n69_219;
+  n69_185 -> g765:"A";
+  n69_177 -> g765:"B";
+  g765:"Y" -> n69_126;
+  n70_33 -> g616:"A";
+  n70_31 -> g616:"B";
+  g616:"Y" -> n69_161;
+  n69_193 -> g852:"A";
+  n69_187 -> g852:"B";
+  g852:"Y" -> n69_145;
+  n70_25 -> g1048:"A1";
+  n69_195 -> g1048:"A2";
+  n69_125 -> g1048:"A3";
+  n69_216 -> g1048:"B1";
+  g1048:"X" -> n69_206;
+  n70_33 -> g630:"A";
+  n70_31 -> g630:"B";
+  g630:"X" -> n69_170;
+  n69_176 -> g635:"A1";
+  n70_15 -> g635:"A2";
+  n69_204 -> g635:"A3";
+  n69_160 -> g635:"B1";
+  g635:"X" -> n69_154;
+  n69_152 -> g619:"A";
+  n69_124 -> g619:"B";
+  g619:"Y" -> n69_176;
+  n68_78 -> g181:"D";
+  n69_56 -> g181:"CLK";
+  n67_141 -> g181:"RESET_B";
+  g181:"Q" -> n69_195;
+  n68_146 -> g433:"D";
+  n69_102 -> g433:"CLK";
+  n67_441 -> g433:"RESET_B";
+  g433:"Q" -> n69_112;
+}

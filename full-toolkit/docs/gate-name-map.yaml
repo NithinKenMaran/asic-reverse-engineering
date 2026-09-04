@@ -1,0 +1,598 @@
+# Maps sky130_fd_sc_hd standard-cell names to a readable naming convention we
+# use throughout our own notes/diagrams/scripts, instead of the raw PDK names.
+#
+# match rule: take the GDS/netlist cell name, strip the "sky130_fd_sc_hd__"
+# prefix and the trailing "_<N>" drive-strength suffix (N = 0,1,2,4,6,8,16,...;
+# bigger N = stronger driver, same logic) -> match the remainder against
+# `raw` below, e.g. "sky130_fd_sc_hd__nand2_2" -> "nand2" -> NAND2.
+#
+# confidence: the 18 gate types seen in warmup/04_final.gds were validated
+# end-to-end against real RTL (validate_full_function.py, 65,536/65,536 PASS)
+# - trust those `expr` fields fully. Every other type below (added for
+# puzzle.gds, which uses ~50 more cell types warmup never exercises) was
+# instead cross-checked against the *actual* gate-primitive netlist in each
+# cell's official sky130_fd_sc_hd__<cell>.functional.v model (cloned from
+# google/skywater-pdk-libs-sky130_fd_sc_hd), not just guessed from the a/o/i/b
+# naming convention - see src/../ (scratchpad) derive_truth_tables.py, which
+# parses each model's buf/not/and/or/nand/nor/xor primitive chain back to a
+# boolean expr. That check also caught two outright typos in the upstream
+# doc comments (nor3, nor3b reference a nonexistent 4th input) that the naming
+# convention alone would not have caught - a concrete reminder not to trust
+# prose over the primitive netlist. Still worth a simulation-based check
+# before leaning on an exact truth table for something load-bearing.
+
+meta:
+  library: sky130_fd_sc_hd
+  drive_strength_suffix: "trailing _<N> is drive strength only, not logic"
+  power_pins: [VPWR, VGND]
+  power_pins_note: >
+    every logic cell also carries VPWR/VGND pins (power rail, not listed per
+    gate below) - exclude these from signal-level traversal/BFS.
+
+gates:
+  # --- basic gates ---
+  - raw: nand2
+    name: NAND2
+    expr: "Y = !(A & B)"
+    inputs: [A, B]
+    outputs: [Y]
+    category: basic_gate
+
+  - raw: and2
+    name: AND2
+    expr: "X = A & B"
+    inputs: [A, B]
+    outputs: [X]
+    category: basic_gate
+
+  - raw: and3
+    name: AND3
+    expr: "X = A & B & C"
+    inputs: [A, B, C]
+    outputs: [X]
+    category: basic_gate
+
+  - raw: or2
+    name: OR2
+    expr: "X = A | B"
+    inputs: [A, B]
+    outputs: [X]
+    category: basic_gate
+
+  - raw: nor2
+    name: NOR2
+    expr: "Y = !(A | B)"
+    inputs: [A, B]
+    outputs: [Y]
+    category: basic_gate
+
+  - raw: xor2
+    name: XOR2
+    expr: "X = A ^ B"
+    inputs: [A, B]
+    outputs: [X]
+    category: basic_gate
+
+  - raw: xnor2
+    name: XNOR2
+    expr: "Y = !(A ^ B)"
+    description: "bitwise equality check (Y=1 iff A==B)"
+    inputs: [A, B]
+    outputs: [Y]
+    category: basic_gate
+
+  - raw: buf
+    name: BUF
+    expr: "X = A"
+    description: "non-inverting buffer (drive strength only)"
+    inputs: [A]
+    outputs: [X]
+    category: basic_gate
+
+  - raw: inv
+    name: INV
+    expr: "Y = !A"
+    inputs: [A]
+    outputs: [Y]
+    category: basic_gate
+
+  - raw: or3
+    name: OR3
+    expr: "X = A | B | C"
+    inputs: [A, B, C]
+    outputs: [X]
+    category: basic_gate
+
+  - raw: or4
+    name: OR4
+    expr: "X = A | B | C | D"
+    inputs: [A, B, C, D]
+    outputs: [X]
+    category: basic_gate
+
+  - raw: and4
+    name: AND4
+    expr: "X = A & B & C & D"
+    inputs: [A, B, C, D]
+    outputs: [X]
+    category: basic_gate
+
+  - raw: nand3
+    name: NAND3
+    expr: "Y = !(A & B & C)"
+    inputs: [A, B, C]
+    outputs: [Y]
+    category: basic_gate
+
+  - raw: nand4
+    name: NAND4
+    expr: "Y = !(A & B & C & D)"
+    inputs: [A, B, C, D]
+    outputs: [Y]
+    category: basic_gate
+
+  - raw: nor3
+    name: NOR3
+    expr: "Y = !(A | B | C)"
+    inputs: [A, B, C]
+    outputs: [Y]
+    category: basic_gate
+
+  - raw: nor4
+    name: NOR4
+    expr: "Y = !(A | B | C | D)"
+    inputs: [A, B, C, D]
+    outputs: [Y]
+    category: basic_gate
+
+  # --- basic gates with one pre-inverted ("b") input, one arm pre-inverted
+  # ("_N"-suffixed pin) so synthesis can absorb a free inverter into the gate ---
+  - raw: and2b
+    name: AND2_1N
+    expr: "X = !A_N & B"
+    inputs: [A_N, B]
+    outputs: [X]
+    category: basic_gate
+
+  - raw: and3b
+    name: AND3_1N
+    expr: "X = !A_N & B & C"
+    inputs: [A_N, B, C]
+    outputs: [X]
+    category: basic_gate
+
+  - raw: and4b
+    name: AND4_1N
+    expr: "X = !A_N & B & C & D"
+    inputs: [A_N, B, C, D]
+    outputs: [X]
+    category: basic_gate
+
+  - raw: nand2b
+    name: NAND2_1N
+    expr: "Y = A_N | !B"
+    description: "NAND2 with the first input pre-inverted at the pin"
+    inputs: [A_N, B]
+    outputs: [Y]
+    category: basic_gate
+
+  - raw: nand3b
+    name: NAND3_1N
+    expr: "Y = !(!A_N & B & C)"
+    inputs: [A_N, B, C]
+    outputs: [Y]
+    category: basic_gate
+
+  - raw: nor3b
+    name: NOR3_1N
+    expr: "Y = C_N & !(A | B)"
+    description: "NOR3 with the third input pre-inverted at the pin (C_N)"
+    inputs: [A, B, C_N]
+    outputs: [Y]
+    category: basic_gate
+
+  - raw: nor4b
+    name: NOR4_1N
+    expr: "Y = !(A | B | C | !D_N)"
+    inputs: [A, B, C, D_N]
+    outputs: [Y]
+    category: basic_gate
+
+  - raw: or3b
+    name: OR3_1N
+    expr: "X = A | B | !C_N"
+    inputs: [A, B, C_N]
+    outputs: [X]
+    category: basic_gate
+
+  - raw: or4b
+    name: OR4_1N
+    expr: "X = A | B | C | !D_N"
+    inputs: [A, B, C, D_N]
+    outputs: [X]
+    category: basic_gate
+
+  - raw: or4bb
+    name: OR4_2N
+    expr: "X = A | B | !(C_N & D_N)"
+    description: "4-input OR, 2 of the 4 inputs pre-inverted"
+    inputs: [A, B, C_N, D_N]
+    outputs: [X]
+    category: basic_gate
+
+  # --- constant tie-off ---
+  - raw: conb
+    name: CONST
+    description: >
+      tie-off constant generator: HI is a pullup (always 1), LO is a
+      pulldown (always 0) - two independent constant outputs from one
+      instance, unlike every other gate here which drives a single output.
+    inputs: []
+    outputs: [HI, LO]
+    expr:
+      HI: "HI = 1"
+      LO: "LO = 0"
+    category: basic_gate
+
+  # --- compound AND-OR / OR-AND gates ---
+  # naming key: a<N> = N-input AND leg, o<N> = N-input OR leg, trailing i =
+  # output inverted, b on a leg = that leg's extra input is inverted ("bubbled")
+  - raw: and4bb
+    name: AND4_2N
+    expr: "X = !A_N & !B_N & C & D"
+    description: "4-input AND, 2 of the 4 inputs pre-inverted"
+    inputs: [A_N, B_N, C, D]
+    outputs: [X]
+    category: compound_gate
+
+  - raw: a21o
+    name: AO21
+    expr: "X = (A1 & A2) | B1"
+    description: "AND2 into OR1"
+    inputs: [A1, A2, B1]
+    outputs: [X]
+    category: compound_gate
+
+  - raw: a21bo
+    name: AO21_NB
+    expr: "X = (A1 & A2) | !B1_N"
+    description: "AND2 into OR1, OR-leg input inverted"
+    inputs: [A1, A2, B1_N]
+    outputs: [X]
+    category: compound_gate
+
+  - raw: a21boi
+    name: AOI21_NB
+    expr: "Y = !((A1 & A2) | !B1_N)"
+    description: "a21bo with the output also inverted"
+    inputs: [A1, A2, B1_N]
+    outputs: [Y]
+    category: compound_gate
+
+  - raw: a31o
+    name: AO31
+    expr: "X = (A1 & A2 & A3) | B1"
+    description: "AND3 into OR1"
+    inputs: [A1, A2, A3, B1]
+    outputs: [X]
+    category: compound_gate
+
+  - raw: o21bai
+    name: OAI21_NB
+    expr: "Y = !((A1 | A2) & !B1_N)"
+    description: "OR2 anded with an inverted third input, output inverted"
+    inputs: [A1, A2, B1_N]
+    outputs: [Y]
+    category: compound_gate
+
+  - raw: a21oi
+    name: AOI21
+    expr: "Y = !((A1 & A2) | B1)"
+    description: "AND2 into OR1, output inverted"
+    inputs: [A1, A2, B1]
+    outputs: [Y]
+    category: compound_gate
+
+  - raw: a211o
+    name: AO211
+    expr: "X = (A1 & A2) | B1 | C1"
+    description: "AND2 into a 3-input OR"
+    inputs: [A1, A2, B1, C1]
+    outputs: [X]
+    category: compound_gate
+
+  - raw: a211oi
+    name: AOI211
+    expr: "Y = !((A1 & A2) | B1 | C1)"
+    inputs: [A1, A2, B1, C1]
+    outputs: [Y]
+    category: compound_gate
+
+  - raw: a221o
+    name: AO221
+    expr: "X = (A1 & A2) | (B1 & B2) | C1"
+    description: "two AND2 legs and a plain input, all into one OR"
+    inputs: [A1, A2, B1, B2, C1]
+    outputs: [X]
+    category: compound_gate
+
+  - raw: a221oi
+    name: AOI221
+    expr: "Y = !((A1 & A2) | (B1 & B2) | C1)"
+    inputs: [A1, A2, B1, B2, C1]
+    outputs: [Y]
+    category: compound_gate
+
+  - raw: a22o
+    name: AO22
+    expr: "X = (A1 & A2) | (B1 & B2)"
+    description: "two AND2 legs into OR1 (AOI22 = classic 2x2 AND-OR)"
+    inputs: [A1, A2, B1, B2]
+    outputs: [X]
+    category: compound_gate
+
+  - raw: a22oi
+    name: AOI22
+    expr: "Y = !((A1 & A2) | (B1 & B2))"
+    inputs: [A1, A2, B1, B2]
+    outputs: [Y]
+    category: compound_gate
+
+  - raw: a2111oi
+    name: AOI2111
+    expr: "Y = !((A1 & A2) | B1 | C1 | D1)"
+    description: "AND2 leg plus three plain inputs, all into NOR"
+    inputs: [A1, A2, B1, C1, D1]
+    outputs: [Y]
+    category: compound_gate
+
+  - raw: a311o
+    name: AO311
+    expr: "X = (A1 & A2 & A3) | B1 | C1"
+    inputs: [A1, A2, A3, B1, C1]
+    outputs: [X]
+    category: compound_gate
+
+  - raw: a31oi
+    name: AOI31
+    expr: "Y = !((A1 & A2 & A3) | B1)"
+    description: "AND3 into OR1, output inverted"
+    inputs: [A1, A2, A3, B1]
+    outputs: [Y]
+    category: compound_gate
+
+  - raw: a32o
+    name: AO32
+    expr: "X = (A1 & A2 & A3) | (B1 & B2)"
+    description: "AND3 leg and AND2 leg into OR1"
+    inputs: [A1, A2, A3, B1, B2]
+    outputs: [X]
+    category: compound_gate
+
+  - raw: a41oi
+    name: AOI41
+    expr: "Y = !((A1 & A2 & A3 & A4) | B1)"
+    description: "AND4 into OR1, output inverted"
+    inputs: [A1, A2, A3, A4, B1]
+    outputs: [Y]
+    category: compound_gate
+
+  - raw: o21a
+    name: OA21
+    expr: "X = (A1 | A2) & B1"
+    description: "OR2 into AND1 (mirror of a21o: AND/OR roles swapped)"
+    inputs: [A1, A2, B1]
+    outputs: [X]
+    category: compound_gate
+
+  - raw: o21ai
+    name: OAI21
+    expr: "Y = !((A1 | A2) & B1)"
+    inputs: [A1, A2, B1]
+    outputs: [Y]
+    category: compound_gate
+
+  - raw: o21ba
+    name: OA21_NB
+    expr: "X = (A1 | A2) & !B1_N"
+    description: "o21a with the AND-leg's extra input pre-inverted, output not inverted"
+    inputs: [A1, A2, B1_N]
+    outputs: [X]
+    category: compound_gate
+
+  - raw: o211a
+    name: OA211
+    expr: "X = (A1 | A2) & B1 & C1"
+    description: "OR2 into first input of a 3-input AND"
+    inputs: [A1, A2, B1, C1]
+    outputs: [X]
+    category: compound_gate
+
+  - raw: o211ai
+    name: OAI211
+    expr: "Y = !((A1 | A2) & B1 & C1)"
+    inputs: [A1, A2, B1, C1]
+    outputs: [Y]
+    category: compound_gate
+
+  - raw: o221a
+    name: OA221
+    expr: "X = (A1 | A2) & (B1 | B2) & C1"
+    description: "two OR2 legs and a plain input, all into one AND"
+    inputs: [A1, A2, B1, B2, C1]
+    outputs: [X]
+    category: compound_gate
+
+  - raw: o22a
+    name: OA22
+    expr: "X = (A1 | A2) & (B1 | B2)"
+    description: "two OR2 legs into AND1 (mirror of a22o)"
+    inputs: [A1, A2, B1, B2]
+    outputs: [X]
+    category: compound_gate
+
+  - raw: o22ai
+    name: OAI22
+    expr: "Y = !((A1 | A2) & (B1 | B2))"
+    inputs: [A1, A2, B1, B2]
+    outputs: [Y]
+    category: compound_gate
+
+  - raw: o2bb2a
+    name: OA22_2N
+    expr: "X = !(A1_N & A2_N) & (B1 | B2)"
+    description: "NAND2 leg (both inputs pre-inverted at the pins) and an OR2 leg, into AND1"
+    inputs: [A1_N, A2_N, B1, B2]
+    outputs: [X]
+    category: compound_gate
+
+  - raw: o311a
+    name: OA311
+    expr: "X = (A1 | A2 | A3) & B1 & C1"
+    inputs: [A1, A2, A3, B1, C1]
+    outputs: [X]
+    category: compound_gate
+
+  - raw: o31a
+    name: OA31
+    expr: "X = (A1 | A2 | A3) & B1"
+    description: "OR3 into AND1 (mirror of a31o)"
+    inputs: [A1, A2, A3, B1]
+    outputs: [X]
+    category: compound_gate
+
+  - raw: o31ai
+    name: OAI31
+    expr: "Y = !((A1 | A2 | A3) & B1)"
+    inputs: [A1, A2, A3, B1]
+    outputs: [Y]
+    category: compound_gate
+
+  - raw: o32a
+    name: OA32
+    expr: "X = (A1 | A2 | A3) & (B1 | B2)"
+    description: "OR3 leg and OR2 leg into AND1"
+    inputs: [A1, A2, A3, B1, B2]
+    outputs: [X]
+    category: compound_gate
+
+  - raw: o32ai
+    name: OAI32
+    expr: "Y = !((A1 | A2 | A3) & (B1 | B2))"
+    inputs: [A1, A2, A3, B1, B2]
+    outputs: [Y]
+    category: compound_gate
+
+  # --- registers / clocking ---
+  - raw: dfrtp
+    name: DFF_RSTB
+    description: "D flip-flop, active-low async reset, positive-edge clocked"
+    pins:
+      D: data in
+      Q: data out
+      CLK: clock
+      RESET_B: active-low async reset
+    inputs: [D, CLK, RESET_B]
+    outputs: [Q]
+    category: register
+    async_ctrl: {pin: RESET_B, effect: 0}
+
+  - raw: dfxtp
+    name: DFF
+    description: "D flip-flop, no reset or set pin at all, positive-edge clocked"
+    pins:
+      D: data in
+      Q: data out
+      CLK: clock
+    inputs: [D, CLK]
+    outputs: [Q]
+    category: register
+
+  - raw: dfstp
+    name: DFF_SETB
+    description: >
+      D flip-flop, active-low async SET (preset to 1 - NOT a reset), positive-
+      edge clocked. Distinct from dfrtp: asserting SET_B forces Q to 1, not 0.
+    pins:
+      D: data in
+      Q: data out
+      CLK: clock
+      SET_B: active-low async set/preset (Q -> 1 when asserted)
+    inputs: [D, CLK, SET_B]
+    outputs: [Q]
+    category: register
+    async_ctrl: {pin: SET_B, effect: 1}
+
+  - raw: clkbuf
+    name: CLKBUF
+    description: "clock buffer, fanout only - not logic"
+    inputs: [A]
+    outputs: [X]
+    category: clock
+
+  # --- muxing ---
+  - raw: mux2
+    name: MUX2
+    expr: "X = S ? A1 : A0"
+    inputs: [A0, A1, S]
+    outputs: [X]
+    category: mux
+
+  # --- physical-only, no signal ---
+  - raw: decap
+    name: DECAP
+    description: "decoupling capacitor, power stability only, carries no signal"
+    category: physical_only
+
+  - raw: tapvpwrvgnd
+    name: WELLTAP
+    description: "substrate/well tap, ties body to VPWR/VGND - no logic"
+    category: physical_only
+
+  - raw: diode
+    name: DIODE
+    description: >
+      antenna/ESD protection diode - single DIODE pin, input-only, "// No
+      contents." in the official functional model. Ties into a signal net
+      for fab protection but drives nothing and computes nothing.
+    inputs: [DIODE]
+    outputs: []
+    category: physical_only
+
+# vias: pure routing between metal layers, not logic. Two naming schemes from
+# two different tools (PDN generator vs. router) can name the same physical
+# layer pair differently - see CLAUDE.md's GDS layer map section. Match by
+# prefix; the router's "viaN_N+1" numbering counts li1 as layer 1.
+vias:
+  - raw_prefix: "VIA_L1M1_PR_MR"
+    name: VIA_LI1_MET1
+    bridges: [li1, met1]
+
+  - raw_prefix: "VIA_M1M2_PR"
+    name: VIA_MET1_MET2
+    bridges: [met1, met2]
+    note: "matches both VIA_M1M2_PR and VIA_M1M2_PR_MR (prefix match)"
+
+  - raw_prefix: "VIA_via2_3_"
+    name: VIA_MET1_MET2
+    bridges: [met1, met2]
+
+  - raw_prefix: "VIA_M2M3_PR"
+    name: VIA_MET2_MET3
+    bridges: [met2, met3]
+
+  - raw_prefix: "VIA_via3_4_"
+    name: VIA_MET2_MET3
+    bridges: [met2, met3]
+
+  - raw_prefix: "VIA_M3M4_PR"
+    name: VIA_MET3_MET4
+    bridges: [met3, met4]
+
+  - raw_prefix: "VIA_via4_5_"
+    name: VIA_MET3_MET4
+    bridges: [met3, met4]
+
+  - raw_prefix: "VIA_via5_6_"
+    name: VIA_MET4_MET5
+    bridges: [met4, met5]
