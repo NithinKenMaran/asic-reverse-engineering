@@ -22,3 +22,19 @@ Without args, this takes the warmup gds by default. The puzzle gds can be given 
 ```bash
 python3 render_diagram.py gds/04_final.gds -L 2 --from S
 ```
+
+# Derive Region Map
+
+```bash
+python3 experiment_single_star.py
+python3 derive_region_map.py
+```
+
+# Solve
+
+```bash
+python3 experiment_perturbations.py   
+python3 experiment_length.py
+
+python3 solver.py
+```

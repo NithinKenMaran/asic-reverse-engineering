@@ -1,18 +1,4 @@
 #!/usr/bin/env python3
-"""Recover a standard-cell connectivity graph from the Jane Street puzzle GDS.
-
-The layout keeps standard cells hierarchical.  We therefore flatten only top-level
-routing and via references, then attach transformed local pin labels to the resulting
-conductive components.  This deliberately avoids flattening transistor geometry.
-
-Provenance: this is the self-contained, pure-stdlib GDS reader (no external
-geometry library) from the jane-street-X toolchain. It is the primary netlist
-extractor in this submission because it needs no reference netlist to complete
-- it parses the GDS records directly, unions conductive rectangles, and attaches
-labeled pins to the resulting nets. `emit_recovered.py` turns its output into
-Verilog. `cross_check.py` compares its instance/port inventory against the
-independent KLayout-based reader in `gdsconn.py`.
-"""
 
 from __future__ import annotations
 

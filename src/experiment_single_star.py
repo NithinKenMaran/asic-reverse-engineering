@@ -1,12 +1,3 @@
-"""Experiment 1: single-star injection sweep.
-
-For each of the 121 serial positions, apply a board that is all-zero except a
-single 1 at that position, run it through the recovered netlist, and record
-every state register that differs from the all-zero baseline. This is the core
-empirical probe: which state elements react to a star at position p reveals p's
-row, column, and region membership *from hardware behavior*, with no assumption
-about grid layout or region boundaries going in.
-"""
 import json
 import os
 import time

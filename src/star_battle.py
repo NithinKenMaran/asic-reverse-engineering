@@ -1,24 +1,8 @@
-"""Two-star Star Battle board representation and rule checker, built from the
-region map empirically derived (by probing the recovered netlist) in
-experiment_single_star.py + derive_region_map.py - not copied from any outside
-source. Used two ways:
-
-1. To construct targeted single-rule-violating perturbations of a candidate
-   board, whose predicted-vs-actual `success` bit is then checked against the
-   real recovered netlist (probe.py) - i.e. this module encodes a *hypothesis*
-   about the rules, and experiment_perturbations.py is what tests that
-   hypothesis against the hardware.
-2. As the constraint model for the logical solver (solver.py), which derives
-   the winning board without brute force or SAT.
-"""
 import json
 import os
 
 REGION_MAP_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "evidence", "region_map.json")
 
-# The known winning board is used ONLY as a convenient starting point for the
-# perturbation experiments (remove/add/swap a star from a valid board) and as a
-# cross-check target. It is never fed to the solver - solver.py rederives it.
 WINNING_BITS = (
     "0000000101010000100000000000010101010000000000001010000001000001000000"
     "100000101000010000000100000010000010010001010000000"

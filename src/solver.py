@@ -1,25 +1,3 @@
-"""
-Logical (constraint-propagation) solver for the two-star Star Battle board,
-using the region map empirically derived in experiment_single_star.py.
-
-Deliberately *not* a SAT/CNF encoding and *not* brute force: this operates
-directly on puzzle semantics (rows, columns, regions, 8-adjacency) with the
-same techniques a human solver uses -
-  1. a placed star eliminates its 8 neighbours,
-  2. a group (row/column/region) that already has its 2 stars eliminates
-     every other cell in that group,
-  3. a group whose remaining unknown cells exactly match its remaining
-     required stars forces all of them to be stars,
-  4. if a region's entire remaining candidate set lies in a single row (or
-     column), that row's (or column's) cells outside the region are
-     eliminated - the region must supply both its stars from that line, so
-     the line's quota is already spoken for.
-Only when propagation alone stalls does it fall back to a minimal
-depth-first search with propagation at every node (standard CSP
-backtracking, not blind enumeration) - and it reports how many guesses that
-took, so the writeup can honestly state how much of the solve was pure
-deduction vs. search.
-"""
 import json
 
 STAR, BLANK, UNKNOWN = 1, 0, -1

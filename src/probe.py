@@ -1,24 +1,3 @@
-"""Black-box probing harness for the recovered puzzle netlist.
-
-This is the instrument the whole functional-recovery flow is built on. It
-treats `../out/recovered_puzzle.v` purely as a black box: compile it ONCE with
-iverilog, then drive it with an arbitrary 121-bit board (loaded at simulation
-*runtime* via $readmemb, so no recompile per experiment) and read back
-`success`, `O`, and every one of the 92 flip-flops' final value.
-
-Unlike the earlier harness in ../../src, the recovered netlist here is
-*behavioral* Verilog (assign + always blocks, registers named state_0..state_91)
-- it is fully self-contained, so no Sky130 vendor cell models and no -I include
-flags are needed. Plain `iverilog recovered_puzzle.v tb.v` is enough.
-
-Usage as a library:
-    from probe import Prober
-    p = Prober()
-    r = p.run("000...121 chars...000")
-    r.success   # 0 or 1
-    r.O          # int 0-255, the byte on O right after acceptance
-    r.regs       # {0: 0, 1: 1, ...} - every state register's Q, keyed by index
-"""
 import os
 import re
 import subprocess

@@ -1,15 +1,3 @@
-"""Experiment 2: differential/perturbation testing against a valid board, run
-through the recovered netlist (probe.py) and checked against the rule
-hypothesis in star_battle.py.
-
-Each test predicts (from the Python rule model) whether a perturbed board should
-pass, then checks the *actual* netlist `success` bit agrees. This is what
-validates the rule hypothesis - matching the star pattern is necessary but not
-sufficient; the rules have to be shown to be *enforced* by the silicon. The
-rectangle-swap test is the important one: it isolates the no-adjacency rule from
-every counting rule, by construction (row/column/region counts and total all
-held exactly constant while a touching pair is created).
-"""
 import itertools
 import json
 import os

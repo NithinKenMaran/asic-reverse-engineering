@@ -1,16 +1,5 @@
 #!/usr/bin/env python3
 """Emit synthesis/formal-friendly Verilog from the recovered GDS connectivity.
-
-Provenance: from the jane-street-X toolchain, used unmodified. It consumes the
-connectivity graph produced by `gds_netlist.py` and the official Sky130 HD
-Liberty JSON models (each output pin's boolean `function`, each flip-flop's
-`ff` clock/next-state/clear/preset description) to write a real Verilog netlist.
-
-Crucially this path is self-contained: it does NOT read any pre-existing
-recovered netlist. It checks for multiple drivers, reports dangling (unread)
-outputs, and deterministically ties the single physically-undriven output-only
-control net low - so `puzzle.gds` alone (plus the public Sky130 Liberty data)
-is enough to regenerate `recovered_puzzle.v`.
 """
 
 from __future__ import annotations

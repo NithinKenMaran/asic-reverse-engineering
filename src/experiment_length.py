@@ -1,9 +1,3 @@
-"""Experiment 3: does the checker require the scan to actually reach cell
-(10,10) - i.e. exactly 121 enabled clocks - or would it accept fewer/more?
-Uses a length-parameterized testbench variant (probe.py's harness is fixed at
-121 cycles by construction). The recovered netlist is self-contained behavioral
-Verilog, so no vendor models / -I flags are needed - plain iverilog suffices.
-"""
 import os
 import subprocess
 
