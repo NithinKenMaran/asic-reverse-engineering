@@ -1,10 +1,3 @@
 # Recover Verilog Netlist from gds
 
-Run this from the repo root:
-
-```bash
-python3 emit_recovered.py /gds/puzzle.gds \
-  --top puzzle \
-  --sky130-root /sky130-root/sky130_fd_sc_hd \
-  --output /out/recovered_puzzle.v
-```
+The full writeup of my solution is linked [here](https://docs.google.com/document/d/13e1aFEQeifo2SGx7zNdfCIUkTa6ihirARH93BGGMytk/edit?usp=sharing).
