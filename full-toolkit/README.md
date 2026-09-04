@@ -17,3 +17,8 @@ python3 inspect_gds.py
 
 Without args, this takes the warmup gds by default. The puzzle gds can be given to this script as an argument. 
 
+# Connectivity Diagram
+
+```bash
+python3 render_diagram.py gds/04_final.gds -L 2 --from S
+```

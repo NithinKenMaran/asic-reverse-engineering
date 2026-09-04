@@ -1,0 +1,68 @@
+{
+  "valid_board": {
+    "violations": {},
+    "predicted_pass": true,
+    "success": 1,
+    "O": 40
+  },
+  "remove_one_star": {
+    "cell": [
+      0,
+      7
+    ],
+    "violations": {
+      "total": "21",
+      "rows": "{0: 1}",
+      "cols": "{7: 1}",
+      "regions": "{'H': 1}"
+    },
+    "predicted_pass": false,
+    "success": 0,
+    "O": 84
+  },
+  "add_one_isolated_star": {
+    "cell": [
+      0,
+      2
+    ],
+    "violations": {
+      "total": "23",
+      "rows": "{0: 3}",
+      "cols": "{2: 3}",
+      "regions": "{'C': 3}"
+    },
+    "predicted_pass": false,
+    "success": 0,
+    "O": 84
+  },
+  "adjacency_only_swap": {
+    "moved": [
+      [
+        0,
+        7
+      ],
+      "->",
+      [
+        0,
+        0
+      ]
+    ],
+    "and": [
+      [
+        1,
+        0
+      ],
+      "->",
+      [
+        1,
+        7
+      ]
+    ],
+    "violations": {
+      "adjacent": "[((1, 7), (2, 7))]"
+    },
+    "predicted_pass": false,
+    "success": 0,
+    "O": 84
+  }
+}
